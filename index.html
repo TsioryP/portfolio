@@ -18,7 +18,8 @@ a{color:inherit}
 .bar .logo{font-weight:700;font-size:18px}
 .bar nav a{color:#C7D2FE;text-decoration:none;font-size:14px;margin-left:20px}
 .glass{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:24px;padding:28px}
-.hero{padding:50px 44px}
+.hero{padding:50px 44px;display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:center}
+.hero-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 30%;border-radius:22px;border:1px solid rgba(255,255,255,.14);display:block}
 .chip{display:inline-block;font-size:12px;padding:6px 12px;border-radius:999px;background:rgba(167,139,250,.18);color:#DDD6FE}
 h1{font-size:56px;line-height:1.05;letter-spacing:-.03em;margin:14px 0 18px;font-weight:700}
 h1 span{background:linear-gradient(90deg,#A78BFA,#67E8F9);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -48,7 +49,7 @@ h2{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#A5B4FC;ma
 .exp .when{color:#B4BDD9;font-size:14px;white-space:nowrap}
 footer{margin-top:60px;text-align:center;color:#8B95B5;font-size:14px}
 footer a{color:#C7D2FE}
-@media(max-width:860px){.sec{grid-template-columns:1fr}h1{font-size:40px}.hero{padding:30px}}
+@media(max-width:860px){.sec{grid-template-columns:1fr}h1{font-size:40px}.hero{padding:30px;grid-template-columns:1fr}.hero-photo{max-width:340px;margin:0 auto;order:-1}}
 </style>
 </head>
 <body>
@@ -60,6 +61,7 @@ footer a{color:#C7D2FE}
 </div>
 
 <section class="glass hero" id="accueil">
+  <div>
   <span class="chip">Disponible · Freelance &amp; remote</span>
   <h1>Développeur back-end &amp; e-commerce.<br><span>PHP · PrestaShop · Web Marketing</span></h1>
   <p class="lead">Je construis des plateformes et des boutiques qui convertissent : je code, je mesure, j'optimise.</p>
@@ -67,6 +69,8 @@ footer a{color:#C7D2FE}
     <a class="b b1" href="#projets">Voir les projets</a>
     <a class="b b2" href="#contact">Me contacter</a>
   </div>
+  </div>
+  <img class="hero-photo" src="Public/profil.jpg" alt="Tsiory Ramarosandratana" loading="eager">
 </section>
 
 <h2 id="projets">Projets</h2>
