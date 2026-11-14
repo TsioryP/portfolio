@@ -48,6 +48,17 @@ h2{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#A5B4FC;ma
 .exp b{font-size:17px}
 .exp small{color:#B4BDD9;font-size:14px}
 .exp .when{color:#B4BDD9;font-size:14px;white-space:nowrap}
+img.zoomable{cursor:zoom-in;transition:transform .2s,border-color .2s}
+img.zoomable:hover{border-color:rgba(167,139,250,.6)!important}
+#lb{position:fixed;inset:0;background:rgba(3,5,12,.92);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;z-index:100;padding:30px}
+#lb.open{display:flex}
+#lb img{max-width:92vw;max-height:86vh;border-radius:14px;box-shadow:0 20px 80px rgba(0,0,0,.6);object-fit:contain}
+#lb button{position:absolute;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;width:46px;height:46px;border-radius:50%;font-size:22px;line-height:1;cursor:pointer}
+#lb button:hover{background:rgba(255,255,255,.2)}
+#lb .x{top:20px;right:20px}
+#lb .p{left:20px;top:50%;transform:translateY(-50%)}
+#lb .n{right:20px;top:50%;transform:translateY(-50%)}
+#lb .cap{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:#C7D2FE;font-size:14px}
 footer{margin-top:60px;text-align:center;color:#8B95B5;font-size:14px}
 footer a{color:#C7D2FE}
 @media(max-width:860px){.sec{grid-template-columns:1fr}h1{font-size:40px}.hero{padding:30px;grid-template-columns:1fr}.hero-photo{max-width:340px;margin:0 auto;order:-1}}
@@ -140,7 +151,49 @@ footer a{color:#C7D2FE}
   </div>
 </section>
 
+<div id="lb" role="dialog" aria-modal="true" aria-label="Aperçu de l'image">
+  <button class="x" aria-label="Fermer">×</button>
+  <button class="p" aria-label="Image précédente">‹</button>
+  <img alt="">
+  <button class="n" aria-label="Image suivante">›</button>
+  <div class="cap"></div>
+</div>
+
 <footer>© <span id="year"></span> Tsiory Ramarosandratana · Alasora, Antananarivo</footer>
+<script>
+(function(){
+  var lb=document.getElementById('lb'), lbImg=lb.querySelector('img'), cap=lb.querySelector('.cap');
+  var prev=lb.querySelector('.p'), next=lb.querySelector('.n');
+  var group=[], idx=0;
+  function show(i){
+    idx=(i+group.length)%group.length;
+    lbImg.src=group[idx].src;
+    lbImg.alt=group[idx].alt||'';
+    cap.textContent=group.length>1?(idx+1)+' / '+group.length:'';
+    prev.style.display=next.style.display=group.length>1?'':'none';
+    lb.classList.add('open');
+  }
+  function close(){ lb.classList.remove('open'); lbImg.removeAttribute('src'); }
+  document.querySelectorAll('.proj img, .hero-photo').forEach(function(img){
+    img.classList.add('zoomable');
+    img.addEventListener('click',function(){
+      var card=img.closest('.proj');
+      group=card?Array.prototype.slice.call(card.querySelectorAll('img')):[img];
+      show(group.indexOf(img));
+    });
+  });
+  prev.addEventListener('click',function(e){e.stopPropagation();show(idx-1);});
+  next.addEventListener('click',function(e){e.stopPropagation();show(idx+1);});
+  lb.querySelector('.x').addEventListener('click',close);
+  lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key==='Escape') close();
+    if(e.key==='ArrowLeft') show(idx-1);
+    if(e.key==='ArrowRight') show(idx+1);
+  });
+})();
+</script>
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </div>
 </body>
