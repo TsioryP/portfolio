@@ -68,6 +68,12 @@ img.zoomable:hover{border-color:rgba(167,139,250,.6)!important}
 #lb .cap{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:#C7D2FE;font-size:14px}
 footer{margin-top:60px;text-align:center;color:#8B95B5;font-size:14px}
 footer a{color:#C7D2FE}
+@media(max-width:600px){
+  .bar{flex-wrap:nowrap;padding:12px 14px;margin:-40px -28px 24px}
+  .bar nav{flex-wrap:nowrap;gap:5px;width:100%;justify-content:space-between}
+  .bar nav a{font-size:11px;padding:6px 7px;gap:3px;min-width:0;white-space:nowrap}
+  .bar nav a svg{width:13px;height:13px}
+}
 @media(max-width:860px){.sec{grid-template-columns:1fr}h1{font-size:40px}.hero{padding:30px;grid-template-columns:1fr}.hero-photo{max-width:340px;margin:0 auto;order:-1}}
 </style>
 </head>
