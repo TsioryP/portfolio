@@ -68,6 +68,10 @@ img.zoomable:hover{border-color:rgba(167,139,250,.6)!important}
 #lb .p{left:20px;top:50%;transform:translateY(-50%)}
 #lb .n{right:20px;top:50%;transform:translateY(-50%)}
 #lb .cap{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:#C7D2FE;font-size:14px}
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:90;display:inline-flex;align-items:center;gap:10px;padding:12px 18px 12px 14px;border-radius:999px;background:#25D366;color:#fff;text-decoration:none;font-weight:600;font-size:15px;box-shadow:0 10px 30px rgba(37,211,102,.35);transition:transform .2s,box-shadow .2s}
+.wa-float:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(37,211,102,.45)}
+.wa-float svg{width:24px;height:24px;flex-shrink:0}
+@media(max-width:600px){.wa-float span{display:none}.wa-float{padding:14px;border-radius:50%}}
 footer{margin-top:60px;text-align:center;color:#8B95B5;font-size:14px}
 footer a{color:#C7D2FE}
 @media(max-width:600px){
@@ -165,6 +169,11 @@ footer a{color:#C7D2FE}
     <a class="b b2" href="https://github.com/TsioryP" target="_blank" rel="noopener">GitHub</a>
   </div>
 </section>
+
+<a class="wa-float" href="https://wa.me/261344905209?text=Bonjour%20Tsiory%2C%20je%20visite%20ton%20portfolio" target="_blank" rel="noopener" aria-label="Me contacter sur WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.25-8.27 8.25zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.55.12-.17.25-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.43.06-.66.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.17 1.73 2.64 4.19 3.7.59.25 1.05.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+  <span>WhatsApp</span>
+</a>
 
 <div id="lb" role="dialog" aria-modal="true" aria-label="Aperçu de l'image">
   <button class="x" aria-label="Fermer">×</button>
