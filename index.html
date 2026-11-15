@@ -15,8 +15,15 @@ body:after{background:#06B6D4;bottom:-200px;right:-120px}
 a{color:inherit}
 .wrap{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding:40px 28px}
 .bar{position:sticky;top:0;z-index:50;display:flex;justify-content:flex-end;align-items:center;margin:-40px -28px 40px;padding:18px 28px;background:rgba(7,10,22,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);flex-wrap:wrap;gap:12px}
-.bar nav a{color:#C7D2FE;text-decoration:none;font-size:14px;margin-left:20px}
-.bar nav a:hover{color:#fff}
+.bar nav{display:flex;gap:10px;flex-wrap:wrap}
+.bar nav a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:14px;font-weight:600;color:#E0E7FF;padding:8px 14px 8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05);transition:transform .15s,background .15s,border-color .15s}
+.bar nav a svg{width:18px;height:18px;flex-shrink:0}
+.bar nav a:hover{transform:translateY(-2px);color:#fff}
+.bar nav a.c-proj{border-color:rgba(124,58,237,.5)}.bar nav a.c-proj:hover{background:rgba(124,58,237,.25)}
+.bar nav a.c-comp{border-color:rgba(6,182,212,.5)}.bar nav a.c-comp:hover{background:rgba(6,182,212,.22)}
+.bar nav a.c-par{border-color:rgba(245,158,11,.5)}.bar nav a.c-par:hover{background:rgba(245,158,11,.2)}
+.bar nav a.c-con{border-color:rgba(16,185,129,.5)}.bar nav a.c-con:hover{background:rgba(16,185,129,.22)}
+.bar nav a.c-proj svg{color:#A78BFA}.bar nav a.c-comp svg{color:#67E8F9}.bar nav a.c-par svg{color:#FBBF24}.bar nav a.c-con svg{color:#34D399}
 .glass{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:24px;padding:28px}
 .hero{padding:50px 44px;display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:center}
 .hero-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 30%;border-radius:22px;border:1px solid rgba(255,255,255,.14);display:block}
@@ -68,7 +75,7 @@ footer a{color:#C7D2FE}
 <div class="wrap">
 
 <div class="bar">
-  <nav><a href="#projets">Projets</a><a href="#competences">Compétences</a><a href="#parcours">Parcours</a><a href="#contact">Contact</a></nav>
+  <nav><a class="c-proj" href="#projets"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Projets</a><a class="c-comp" href="#competences"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Compétences</a><a class="c-par" href="#parcours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>Parcours</a><a class="c-con" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Contact</a></nav>
 </div>
 
 <section class="glass hero" id="accueil">
