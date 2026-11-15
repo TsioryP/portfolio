@@ -72,6 +72,18 @@ img.zoomable:hover{border-color:rgba(167,139,250,.6)!important}
 .wa-float:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(37,211,102,.45)}
 .wa-float svg{width:24px;height:24px;flex-shrink:0}
 @media(max-width:600px){.wa-float span{display:none}.wa-float{padding:14px;border-radius:50%}}
+.contact-art{width:76px;height:76px;margin:0 auto 18px;border-radius:22px;background:linear-gradient(135deg,#7C3AED,#06B6D4);display:flex;align-items:center;justify-content:center;box-shadow:0 14px 40px rgba(124,58,237,.45)}
+.contact-art svg{width:36px;height:36px;color:#fff}
+.cgrid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:8px}
+.cbtn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:12px;font-weight:600;font-size:15px;text-decoration:none;color:#fff;transition:transform .2s,box-shadow .2s}
+.cbtn svg{width:20px;height:20px;flex-shrink:0}
+.cbtn:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.35)}
+.c-mail{background:linear-gradient(90deg,#7C3AED,#A855F7)}
+.c-tel{background:#0E7490}
+.c-wa{background:#25D366}
+.c-li{background:#0A66C2}
+.c-gh{background:#24292F;border:1px solid rgba(255,255,255,.22)}
+@media(max-width:600px){.cbtn{width:100%;justify-content:center}}
 footer{margin-top:60px;text-align:center;color:#8B95B5;font-size:14px}
 footer a{color:#C7D2FE}
 @media(max-width:600px){
@@ -160,13 +172,15 @@ footer a{color:#C7D2FE}
 </section>
 
 <h2 id="contact">Contact</h2>
-<section class="glass" style="padding:28px;text-align:center">
-  <p class="lead" style="margin:0 auto 20px">Une boutique à lancer, une plateforme à concevoir ou des campagnes à piloter ? Parlons-en.</p>
-  <div class="btns" style="justify-content:center">
-    <a class="b b1" href="mailto:tsioryramarosandratana@gmail.com">tsioryramarosandratana@gmail.com</a>
-    <a class="b b2" href="tel:+261344905209">+261 34 49 052 09</a>
-    <a class="b b2" href="https://www.linkedin.com/in/tsioryp-ramarosandratana" target="_blank" rel="noopener">LinkedIn</a>
-    <a class="b b2" href="https://github.com/TsioryP" target="_blank" rel="noopener">GitHub</a>
+<section class="glass" style="padding:36px 28px;text-align:center">
+  <div class="contact-art"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><polyline points="3 8 12 13 21 8"/></svg></div>
+  <p class="lead" style="margin:0 auto 26px">Une boutique à lancer, une plateforme à concevoir ou des campagnes à piloter ? Parlons-en.</p>
+  <div class="cgrid">
+    <a class="cbtn c-mail" href="mailto:tsioryramarosandratana@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>tsioryramarosandratana@gmail.com</a>
+    <a class="cbtn c-tel" href="tel:+261344905209"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+261 34 49 052 09</a>
+    <a class="cbtn c-wa" href="https://wa.me/261344905209" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.25-8.27 8.25zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.55.12-.17.25-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.43.06-.66.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.17 1.73 2.64 4.19 3.7.59.25 1.05.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg>WhatsApp</a>
+    <a class="cbtn c-li" href="https://www.linkedin.com/in/tsioryp-ramarosandratana" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-13h4v2"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+    <a class="cbtn c-gh" href="https://github.com/TsioryP" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>GitHub</a>
   </div>
 </section>
 
